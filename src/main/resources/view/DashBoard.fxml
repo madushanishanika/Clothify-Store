@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="594.0" prefWidth="742.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.DashBoardController">
+   <children>
+      <AnchorPane fx:id="dashBoardPane" layoutX="-3.0" prefHeight="630.0" prefWidth="215.0" style="-fx-background-color: #191970;">
+         <children>
+            <Text fill="WHITE" layoutX="6.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLOTHIFY ">
+               <font>
+                  <Font name="Bauhaus 93" size="30.0" />
+               </font>
+            </Text>
+            <JFXButton layoutX="10.0" layoutY="89.0" onAction="#orderButtonOnAction" prefHeight="47.0" prefWidth="189.0" style="-fx-background-color: #708090;" text="Orders" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="7.0" layoutY="442.0" onAction="#salesReturnsButtonOnAction" prefHeight="47.0" prefWidth="189.0" style="-fx-background-color: #708090;" text="Sales Returns" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="10.0" layoutY="373.0" onAction="#orderDetailsButtonOnAction" prefHeight="47.0" prefWidth="189.0" style="-fx-background-color: #708090;" text="Order Details" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="11.0" layoutY="237.0" onAction="#employeeButtonOnAction" prefHeight="47.0" prefWidth="189.0" style="-fx-background-color: #708090;" text="Employees" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="11.0" layoutY="166.0" onAction="#itemButtonOnAction" prefHeight="47.0" prefWidth="189.0" style="-fx-background-color: #708090;" text="Items" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="11.0" layoutY="308.0" onAction="#suppliersButtonOnAction" prefHeight="47.0" prefWidth="189.0" style="-fx-background-color: #708090;" text="Suppliers" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="6.0" layoutY="511.0" onAction="#salesReportsButtonsOnAction" prefHeight="47.0" prefWidth="189.0" style="-fx-background-color: #708090;" text="Sales Reports" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <Text fill="WHITE" layoutX="85.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STORE">
+               <font>
+                  <Font name="Bauhaus 93" size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="rootPane" layoutX="212.0" prefHeight="630.0" prefWidth="590.0" />
+   </children>
+</AnchorPane>

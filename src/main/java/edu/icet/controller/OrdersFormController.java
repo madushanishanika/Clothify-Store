@@ -63,4 +63,19 @@ public class OrdersFormController {
 
     public void updateButtonOnAction(ActionEvent actionEvent) {
     }
+
+    public void suppliersButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    public void salesReportsButtonsOnAction(ActionEvent actionEvent) {
+    }
+
+    public void employeeButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    public void orderDetailsButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    public void salesReturnsButtonOnAction(ActionEvent actionEvent) {
+    }
 }
