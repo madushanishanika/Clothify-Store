@@ -54,8 +54,13 @@
                   <Font name="Bauhaus 93" size="30.0" />
                </font>
             </Text>
+            <JFXButton layoutX="7.0" layoutY="570.0" onAction="#exitButtonOnAction" prefHeight="47.0" prefWidth="189.0" style="-fx-background-color: #708090;" text="Exit" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua Bold" size="24.0" />
+               </font>
+            </JFXButton>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="rootPane" layoutX="212.0" prefHeight="630.0" prefWidth="590.0" />
+      <AnchorPane fx:id="rootPane" layoutX="212.0" prefHeight="630.0" prefWidth="600.0" />
    </children>
 </AnchorPane>

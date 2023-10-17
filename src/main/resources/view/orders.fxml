@@ -48,7 +48,7 @@
             <JFXTextField fx:id="orderDateText" layoutX="414.0" layoutY="75.0" />
             <JFXTextField fx:id="employeeIdText" layoutX="152.0" layoutY="120.0" />
             <JFXTextField fx:id="customerIdText" layoutX="152.0" layoutY="150.0" />
-            <Label fx:id="customerNameLable" layoutX="19.0" layoutY="193.0" text="Customer Name:">
+            <Label fx:id="customerNameLable" layoutX="15.0" layoutY="193.0" text="Customer Name:">
                <font>
                   <Font name="Comic Sans MS Bold" size="14.0" />
                </font>
