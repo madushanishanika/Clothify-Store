@@ -5,9 +5,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TreeTableColumn?>
 <?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane fx:id="optionText" prefHeight="630.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.EmployeesFormController">
    <children>
@@ -92,7 +93,7 @@
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </JFXButton>
-      <TreeTableView layoutX="22.0" layoutY="337.0" prefHeight="264.0" prefWidth="561.0">
+      <TreeTableView layoutX="22.0" layoutY="337.0" prefHeight="239.0" prefWidth="561.0">
          <columns>
             <TreeTableColumn prefWidth="46.0" text="Emp Id" />
             <TreeTableColumn prefWidth="47.0" text="Name" />
@@ -106,5 +107,15 @@
             <TreeTableColumn prefWidth="62.0" text="Bank" />
          </columns>
       </TreeTableView>
+      <ImageView fitHeight="45.0" fitWidth="71.0" layoutX="4.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/privious.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="561.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/next.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

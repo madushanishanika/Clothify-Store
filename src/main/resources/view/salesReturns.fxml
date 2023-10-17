@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="630.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.salesReturnsFormController">
    <children>
@@ -12,5 +17,74 @@
             <Font name="Algerian" size="30.0" />
          </font>
       </Label>
+      <Label fx:id="orderIdLable" layoutX="39.0" layoutY="99.0" text="Order Id :">
+         <font>
+            <Font name="Comic Sans MS Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="orderIdText" layoutX="135.0" layoutY="93.0" />
+      <JFXButton layoutX="291.0" layoutY="91.0" onAction="#searchButtonOnAction" prefHeight="34.0" prefWidth="75.0" style="-fx-background-color: #008080;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </JFXButton>
+      <TreeTableView layoutX="25.0" layoutY="164.0" prefHeight="322.0" prefWidth="555.0">
+         <columns>
+            <TreeTableColumn prefWidth="75.0" text="Item Id" />
+            <TreeTableColumn prefWidth="69.0" text="Description" />
+            <TreeTableColumn prefWidth="59.0" text="Qty" />
+            <TreeTableColumn prefWidth="65.0" text="Unit Price" />
+            <TreeTableColumn prefWidth="63.0" text="Date" />
+            <TreeTableColumn prefWidth="47.0" text="Type" />
+            <TreeTableColumn prefWidth="58.0" text="Size" />
+            <TreeTableColumn minWidth="0.0" prefWidth="59.0" text="Discount" />
+            <TreeTableColumn prefWidth="59.0" text="Sub Tot" />
+         </columns>
+      </TreeTableView>
+      <JFXButton layoutX="377.0" layoutY="91.0" onAction="#clearButtonOnAction" prefHeight="34.0" prefWidth="75.0" style="-fx-background-color: #008080;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="462.0" layoutY="91.0" onAction="#updateButtonOnAction" prefHeight="37.0" prefWidth="84.0" style="-fx-background-color: #008080;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="totalLable" layoutX="25.0" layoutY="516.0" text="Total:" textFill="MAROON">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalLable1" layoutX="239.0" layoutY="518.0" text="0.00" textFill="MAROON">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalLable2" layoutX="181.0" layoutY="518.0" text="Qty:" textFill="MAROON">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalPriceLable" layoutX="87.0" layoutY="518.0" text="0.00" textFill="MAROON">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="445.0" layoutY="510.0" onAction="#placeReturnsButtonOnAction" prefHeight="37.0" prefWidth="135.0" style="-fx-background-color: #008080;" text="Place Returns" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="45.0" fitWidth="71.0" layoutX="3.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/privious.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="562.0" layoutY="590.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/next.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

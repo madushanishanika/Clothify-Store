@@ -5,9 +5,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TreeTableColumn?>
 <?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="630.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.OrderDetailsFormController">
    <children>
@@ -39,7 +40,7 @@
             <TreeTableColumn prefWidth="61.0" text="Option" />
          </columns>
       </TreeTableView>
-      <TreeTableView layoutX="21.0" layoutY="355.0" prefHeight="214.0" prefWidth="555.0">
+      <TreeTableView layoutX="21.0" layoutY="355.0" prefHeight="191.0" prefWidth="555.0">
          <columns>
             <TreeTableColumn prefWidth="75.0" text="Item Id" />
             <TreeTableColumn prefWidth="69.0" text="Description" />
@@ -52,10 +53,20 @@
             <TreeTableColumn prefWidth="59.0" text="Sub Tot" />
          </columns>
       </TreeTableView>
-      <JFXButton layoutX="501.0" layoutY="579.0" onAction="#clearButtonOnAction" prefHeight="34.0" prefWidth="75.0" style="-fx-background-color: #008080;" text="Clear" textFill="WHITE">
+      <JFXButton layoutX="473.0" layoutY="559.0" onAction="#clearButtonOnAction" prefHeight="34.0" prefWidth="75.0" style="-fx-background-color: #008080;" text="Clear" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </JFXButton>
+      <ImageView fitHeight="45.0" fitWidth="71.0" layoutX="7.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/privious.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="558.0" layoutY="586.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/next.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

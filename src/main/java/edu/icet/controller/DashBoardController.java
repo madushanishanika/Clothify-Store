@@ -102,4 +102,7 @@ public class DashBoardController {
             e.printStackTrace();
         }
     }
+
+    public void exitButtonOnAction(ActionEvent actionEvent) {
+    }
 }

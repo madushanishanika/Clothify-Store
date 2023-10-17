@@ -6,6 +6,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TreeTableColumn?>
 <?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -99,7 +101,7 @@
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="445.0" layoutY="570.0" onAction="#saveButtonOnAction" prefHeight="37.0" prefWidth="119.0" style="-fx-background-color: #008080;" text="Save" textFill="WHITE">
+      <JFXButton layoutX="445.0" layoutY="558.0" onAction="#saveButtonOnAction" prefHeight="37.0" prefWidth="119.0" style="-fx-background-color: #008080;" text="Save" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="16.0" />
          </font>
@@ -109,5 +111,15 @@
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </JFXButton>
+      <ImageView fitHeight="45.0" fitWidth="71.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/privious.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="550.0" layoutY="594.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/next.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
