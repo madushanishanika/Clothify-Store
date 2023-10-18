@@ -2,12 +2,26 @@ package edu.icet.controller;
 
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
+import edu.icet.util.CrudUtil;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 
-public class ItemFormController {
+import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ResourceBundle;
 
+public class ItemFormController implements Initializable {
+
+    public ComboBox cmbTypeN;
+    public ComboBox cmbSize;
+    public ComboBox cmbSupplierName;
+    public ComboBox cmbSupplierId;
     @FXML
     private Label itemFormLabel;
 
@@ -59,17 +73,10 @@ public class ItemFormController {
     @FXML
     private JFXTextField byingPriceText;
 
-    @FXML
-    private JFXComboBox<?> typeCmbBox;
-
-    @FXML
-    private JFXComboBox<?> sizeCmbBox;
-
-    @FXML
-    private JFXComboBox<?> supplierIdCmbBox;
-
-    @FXML
-    private JFXComboBox<?> supplierNameCmbBox;
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadCmbType();
+        loadSizeCmbBox();
+    }
 
     @FXML
     void UpdateButtonOnAction(ActionEvent event) {
@@ -81,14 +88,51 @@ public class ItemFormController {
 
     }
 
-    @FXML
+   @FXML
     void clearButtonOnAction(ActionEvent event) {
 
+        itemIdText.clear();
+        descriptionText.clear();
+        quantityText.clear();
+        byingPriceText.clear();
+        sellingPriceText.clear();
+        cmbTypeN.setValue(null);
+        cmbSize.setValue(null);
+        cmbSupplierId.setValue(null);
+        profitText.clear();
     }
 
     @FXML
     void saveButtonOnAction(ActionEvent event) {
 
+    }
+
+
+    public void loadCmbType(){
+        ObservableList<String> obs = FXCollections.observableArrayList("Male", "Female", "Kids");
+        cmbTypeN.getItems().addAll(obs);
+    }
+
+
+    public void loadSizeCmbBox(){
+        ObservableList<String> obsList = FXCollections.observableArrayList("Small", "Medium","Large");
+        cmbSize.getItems().addAll(obsList);
+    }
+    public void loadCmbSupId(){
+        try {
+            ResultSet resultSet = CrudUtil.execute("SELECT id FROM supplier");
+            ObservableList<String> supplierId = FXCollections.observableArrayList();
+
+            while(resultSet.next()){
+                supplierId.add(resultSet.getString(1));
+            }
+
+            cmbSupplierId.setItems(supplierId);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }
