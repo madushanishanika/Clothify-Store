@@ -38,8 +38,8 @@
             <Font name="Comic Sans MS Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="contactDetailsText" layoutX="141.0" layoutY="173.0" />
-      <JFXTextField fx:id="companyText" layoutX="140.0" layoutY="205.0" />
+      <JFXTextField fx:id="supContactDetailsText" layoutX="141.0" layoutY="173.0" />
+      <JFXTextField fx:id="supCompanyText" layoutX="140.0" layoutY="205.0" />
       <JFXButton layoutX="466.0" layoutY="229.0" onAction="#saveButtonOnAction" prefHeight="37.0" prefWidth="81.0" style="-fx-background-color: #008080;" text="Save" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="16.0" />
