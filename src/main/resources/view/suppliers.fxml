@@ -55,13 +55,13 @@
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </JFXButton>
-      <TreeTableView layoutX="12.0" layoutY="278.0" prefHeight="189.0" prefWidth="576.0">
+      <TreeTableView fx:id="tblSupplier" layoutX="12.0" layoutY="278.0" prefHeight="189.0" prefWidth="576.0">
          <columns>
-            <TreeTableColumn prefWidth="101.0" text="Supplier Id" />
-            <TreeTableColumn prefWidth="107.0" text="Supplier Name" />
-            <TreeTableColumn prefWidth="120.0" text="Contact Details" />
-            <TreeTableColumn prefWidth="129.0" text="Compny" />
-            <TreeTableColumn prefWidth="118.0" text="History" />
+            <TreeTableColumn fx:id="colId" prefWidth="101.0" text="Supplier Id" />
+            <TreeTableColumn fx:id="colTitle" prefWidth="107.0" text="Titele" />
+            <TreeTableColumn fx:id="colName" prefWidth="120.0" text="Supplier Name" />
+            <TreeTableColumn fx:id="colContactNo" prefWidth="129.0" text="Contact Details" />
+            <TreeTableColumn fx:id="colCompany" prefWidth="118.0" text="Compny" />
          </columns>
       </TreeTableView>
       <TreeTableView layoutX="112.0" layoutY="483.0" prefHeight="118.0" prefWidth="389.0">
@@ -81,7 +81,7 @@
             <Image url="@../images/next.png" />
          </image>
       </ImageView>
-      <Label fx:id="lblSupplierId" layoutX="140.0" layoutY="98.0" prefHeight="21.0" prefWidth="81.0" text="S001">
+      <Label fx:id="lblSupplierId" layoutX="140.0" layoutY="96.0" prefHeight="21.0" prefWidth="81.0" text="Supplier Id">
          <font>
             <Font name="Comic Sans MS Bold" size="14.0" />
          </font>
