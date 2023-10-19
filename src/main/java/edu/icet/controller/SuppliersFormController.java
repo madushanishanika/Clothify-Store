@@ -13,12 +13,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+
 
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Optional;
+
 import java.util.ResourceBundle;
 
 public class SuppliersFormController implements Initializable {
@@ -27,12 +30,13 @@ public class SuppliersFormController implements Initializable {
     public Label supplierNameLabel1;
     public ComboBox cmbTittle;
     public Label lblSupplierId;
-    public TreeTableView tblSupplier;
-    public TreeTableColumn colName;
-    public TreeTableColumn colTitle;
-    public TreeTableColumn colId;
-    public TreeTableColumn colContactNo;
-    public TreeTableColumn colCompany;
+    public TableView tblSupplier;
+    public TableColumn colId;
+    public TableColumn colTitle;
+    public TableColumn colName;
+    public TableColumn colContactNo;
+    public TableColumn colCompany;
+
     @FXML
     private Label supplierIdLabel;
 
@@ -55,16 +59,17 @@ public class SuppliersFormController implements Initializable {
     private JFXTextField supCompanyText;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        loadCmbTitel();
         generateId();
+        loadCmbTitel();
+        colId.setCellValueFactory(new PropertyValueFactory<>("supplier_Id"));
+        colTitle.setCellValueFactory(new PropertyValueFactory<>("title"));
+        colName.setCellValueFactory(new PropertyValueFactory<>("supplier_name"));
+        colContactNo.setCellValueFactory(new PropertyValueFactory<>("contact_details"));
+        colCompany.setCellValueFactory(new PropertyValueFactory<>("company_name"));
+
+        loadTable();
+
     }
-//    public void setData(TreeItem<SupplierTm> value){
-//        lblSupplierId.setText(value.getValue().getSupID());
-//        cmbTittle.setValue(value.getValue().getTitle());
-//        supplierNameText.setText(value.getValue().getSupName());
-//        supCompanyText.setText(value.getValue().getSupCompany());
-//        supContactDetailsText.setText(value.getValue().getSupContactNumber());
-//    }
     @FXML
     void clearButtonOnAction(ActionEvent event) {
         cmbTittle.setValue(null);
@@ -87,7 +92,8 @@ public class SuppliersFormController implements Initializable {
 
             if(isAdded){
                 new Alert(Alert.AlertType.INFORMATION,"Supplier Saved..!").show();
-
+                clearFields();
+                loadTable();
             }else{
                 new Alert(Alert.AlertType.ERROR,"Something went wrong..!").show();
             }
@@ -96,6 +102,13 @@ public class SuppliersFormController implements Initializable {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
+    }
+    public void clearFields(){
+        generateId();
+        cmbTittle.setValue(null);
+        supplierNameText.clear();
+        supContactDetailsText.clear();
+        supCompanyText.clear();
     }
     private void generateId() {
         try {
@@ -114,40 +127,24 @@ public class SuppliersFormController implements Initializable {
             e.printStackTrace();
         }
     }
-//    public void loadTable() {
-//        ObservableList<SupplierTm> tmList = FXCollections.observableArrayList();
-//        List<Supplier> list = new ArrayList<>();
-//        try {
-//            ResultSet resultSet = CrudUtil.execute("SELECT * FROM supplier");
-//
-//            while (resultSet.next()) {
-//                list.add(new Supplier(
-//                        resultSet.getString(1),
-//                        resultSet.getString(2),
-//                        resultSet.getString(3),
-//                        resultSet.getString(4),
-//                        resultSet.getString(5)
-//                ));
-//            }
-//
-//            for (Supplier supplier : list) {
-//                tmList.add(new SupplierTm(
-//                        supplier.getSupID(),
-//                        supplier.getTitle(),
-//                        supplier.getSupName(),
-//                        supplier.getSupContactNumber(),
-//                        supplier.getSupCompany()
-//                ));
-//            }
-//            TreeItem<SupplierTm> treeItem = new RecursiveTreeItem<>(tmList, RecursiveTreeObject::getChildren);
-//            tblSupplier.setRoot(treeItem);
-//            tblSupplier.setShowRoot(false);
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        } catch (ClassNotFoundException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
+    public void loadTable() {
+        ObservableList<Supplier> list = FXCollections.observableArrayList();
+        try {
+            ResultSet resultSet = CrudUtil.execute("SELECT * FROM supplier");
+            while (resultSet.next()) {
+                list.add(new Supplier(
+                        resultSet.getString(1),
+                        resultSet.getString(2),
+                        resultSet.getString(3),
+                        resultSet.getString(4),
+                        resultSet.getString(5)
+                ));
+            }
+            tblSupplier.setItems(list);
+        } catch (ClassNotFoundException | SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
     public void loadCmbTitel(){
         ObservableList<String> obs = FXCollections.observableArrayList("Mr.", "Mrs.");
         cmbTittle.getItems().addAll(obs);
