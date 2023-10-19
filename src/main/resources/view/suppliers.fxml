@@ -4,6 +4,8 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TreeTableColumn?>
 <?import javafx.scene.control.TreeTableView?>
 <?import javafx.scene.image.Image?>
@@ -55,15 +57,6 @@
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </JFXButton>
-      <TreeTableView fx:id="tblSupplier" layoutX="12.0" layoutY="278.0" prefHeight="189.0" prefWidth="576.0">
-         <columns>
-            <TreeTableColumn fx:id="colId" prefWidth="101.0" text="Supplier Id" />
-            <TreeTableColumn fx:id="colTitle" prefWidth="107.0" text="Titele" />
-            <TreeTableColumn fx:id="colName" prefWidth="120.0" text="Supplier Name" />
-            <TreeTableColumn fx:id="colContactNo" prefWidth="129.0" text="Contact Details" />
-            <TreeTableColumn fx:id="colCompany" prefWidth="118.0" text="Compny" />
-         </columns>
-      </TreeTableView>
       <TreeTableView layoutX="112.0" layoutY="483.0" prefHeight="118.0" prefWidth="389.0">
          <columns>
             <TreeTableColumn prefWidth="133.0" text="Item Id" />
@@ -93,5 +86,14 @@
          </font>
       </Label>
       <ComboBox fx:id="cmbTittle" layoutX="141.0" layoutY="123.0" prefHeight="25.0" prefWidth="105.0" promptText="Select" />
+      <TableView fx:id="tblSupplier" layoutX="40.0" layoutY="295.0" prefHeight="160.0" prefWidth="533.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="colTitle" prefWidth="113.0" text="Title " />
+            <TableColumn fx:id="colName" prefWidth="92.0" text="Name" />
+            <TableColumn fx:id="colContactNo" prefWidth="133.0" text="ContactNo" />
+            <TableColumn fx:id="colCompany" prefWidth="119.0" text="Comapany" />
+         </columns>
+      </TableView>
    </children>
 </AnchorPane>
