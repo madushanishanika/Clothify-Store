@@ -61,11 +61,11 @@ public class SuppliersFormController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         generateId();
         loadCmbTitel();
-        colId.setCellValueFactory(new PropertyValueFactory<>("supplier_Id"));
+        colId.setCellValueFactory(new PropertyValueFactory<>("supID"));
         colTitle.setCellValueFactory(new PropertyValueFactory<>("title"));
-        colName.setCellValueFactory(new PropertyValueFactory<>("supplier_name"));
-        colContactNo.setCellValueFactory(new PropertyValueFactory<>("contact_details"));
-        colCompany.setCellValueFactory(new PropertyValueFactory<>("company_name"));
+        colName.setCellValueFactory(new PropertyValueFactory<>("supName"));
+        colContactNo.setCellValueFactory(new PropertyValueFactory<>("supContactNumber"));
+        colCompany.setCellValueFactory(new PropertyValueFactory<>("supCompany"));
 
         loadTable();
 

@@ -24,5 +24,3 @@ q
 Asrc/main/java/edu/icet/controller/salesReturnsFormController.java,3\5\3518f1ff915368e833a41424e95d94ed07f03379
 k
 ;src/main/java/edu/icet/controller/SignUpFormController.java,3\5\3587cd93ba790fe307e554316eb21362ceb1c3ac
-X
-(src/main/java/edu/icet/entity/Items.java,b\1\b11eef5e346d93996e7fc1d8433257a8ebda14ba
