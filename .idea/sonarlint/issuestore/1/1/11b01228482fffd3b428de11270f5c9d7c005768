@@ -1,0 +1,21 @@
+
+{
+java:S1104"YMake dashBoardPane a static final constant or non-public and provide accessors if needed.(þ Ù»ÿÿÿÿÿ8‘¾Í»³1
+q
+java:S1104"TMake rootPane a static final constant or non-public and provide accessors if needed.(µ™‹á8 ’Ò»³1
+£
+java:S1186j"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ö¬É‚ýÿÿÿÿ8ˆé½ß³1
+T
+java:S1172"2Remove this unused method parameter "actionEvent".(ÊÒ“ƒÿÿÿÿÿ8Ï²Õ»³1
+T
+java:S1172"2Remove this unused method parameter "actionEvent".(Îû¦Íþÿÿÿÿ8û˜Û¼³1
+O
+java:S1172)"2Remove this unused method parameter "actionEvent".(žˆáÆ8ÅÈìÀ³1
+N
+java:S11726"2Remove this unused method parameter "actionEvent".(Õçõ8ž‹ôÉ³1
+O
+java:S1172C"2Remove this unused method parameter "actionEvent".(•ß¯”8ÂÀÎË³1
+O
+java:S1172P"2Remove this unused method parameter "actionEvent".(ŒõÚù8°³‘Î³1
+O
+java:S1172]"2Remove this unused method parameter "actionEvent".(µ¬îÀ8«’«Î³1

@@ -24,3 +24,13 @@ q
 Asrc/main/java/edu/icet/controller/salesReturnsFormController.java,3\5\3518f1ff915368e833a41424e95d94ed07f03379
 k
 ;src/main/java/edu/icet/controller/SignUpFormController.java,3\5\3587cd93ba790fe307e554316eb21362ceb1c3ac
+W
+'src/main/java/edu/icet/dto/ItemsTm.java,e\f\ef2a6e761fefe6a6be8bb671adf3c2083697185e
+i
+9src/main/java/edu/icet/controller/ItemFormController.java,7\c\7cb65a972cad17c38fbacffbe1c8ba8a4e30d6ac
+Y
+)src/main/java/edu/icet/util/CrudUtil.java,f\a\fa032653ea28d1b84f043e57901759c3c8333977
+X
+(src/main/java/edu/icet/entity/Items.java,b\1\b11eef5e346d93996e7fc1d8433257a8ebda14ba
+[
++src/main/java/edu/icet/db/DBConnection.java,e\6\e6a33146184486285f1e7b6c93361d03a04adb4f
